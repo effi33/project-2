@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "PROJECT NAME",
-  "description": "PROJECT DESCRIPTION",
+  "name": "Project 2 Attempt 1",
+  "description": "First attempt by effie.",
   "version": "0.1",
   "content_scripts": [
     {
@@ -12,7 +12,10 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_idle"
     }
-  ]
+  ],
+  "icons": {
+    "128": "images/blob.png"
+  }
 }
