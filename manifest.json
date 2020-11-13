@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Project 2 Attempt 1",
-  "description": "First attempt by effie.",
+  "name": "Project 2 #3",
+  "description": "Third attempt by effie.",
   "version": "0.1",
   "content_scripts": [
     {

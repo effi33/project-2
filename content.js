@@ -1,23 +1,14 @@
-// var elements = document.getElementsByTagName('*');
-//
-// for (var i = 0; i < elements.length; i++) {
-//    var element = elements[i];
-//    //console.log( element );
-//    //element.style.setProperty('border','solid 1px red');
-//
-//    var r = Math.floor(Math.random()*255);
-//    var g = Math.floor(Math.random()*255);
-//    var b = Math.floor(Math.random()*255);
-//    var c = "rgb(" + r + "," + g + "," + b +")";
-//
-//
-//    element.style.setProperty('background-color',c);
-// }
+ var html = document.querySelector('html');
+ var walker = document.createTreeWalker(html,NodeFilter.SHOW_TEXT);
 
-var html = document.querySelector('html');
-var walker = document.createTreeWalker(html,NodeFilter.SHOW_TEXT);
-
-var node;
-while (node = walker.nextNode()) {
-  node.nodeValue = node.nodeValue.replace(/trump/gi,'some guy');
-}
+ var node;
+ while (node = walker.nextNode()) {
+   node.nodeValue = node.nodeValue.replace(/trump/gi,'Dingus #1');
+   node.nodeValue = node.nodeValue.replace(/biden/gi,'Dingus #2');
+   node.nodeValue = node.nodeValue.replace(/news/gi,'bullshit, but our lifeline');
+   node.nodeValue = node.nodeValue.replace(/good/gi,'insert your own opinion');
+   node.nodeValue = node.nodeValue.replace(/bad/gi,'insert your own opinion');
+   node.nodeValue = node.nodeValue.replace(/people/gi,'us');
+   node.nodeValue = node.nodeValue.replace(/my/gi,'our');
+   node.nodeValue = node.nodeValue.replace(/your/gi,'our');
+ }
