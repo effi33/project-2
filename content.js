@@ -1,23 +1,19 @@
-// var elements = document.getElementsByTagName('*');
-//
-// for (var i = 0; i < elements.length; i++) {
-//    var element = elements[i];
-//    //console.log( element );
-//    //element.style.setProperty('border','solid 1px red');
-//
-//    var r = Math.floor(Math.random()*255);
-//    var g = Math.floor(Math.random()*255);
-//    var b = Math.floor(Math.random()*255);
-//    var c = "rgb(" + r + "," + g + "," + b +")";
-//
-//
-//    element.style.setProperty('background-color',c);
-// }
-
-var html = document.querySelector('html');
-var walker = document.createTreeWalker(html,NodeFilter.SHOW_TEXT);
-
-var node;
-while (node = walker.nextNode()) {
-  node.nodeValue = node.nodeValue.replace(/trump/gi,'some guy');
+console.log('We are ready to replace the images!'); chrome.runtime.onMessage.addListener(replace);
+function replace()
+{
+let filenames = [
+"kitten.jpg"
+//"kitten2.jpg",
+//"kitten3.jpg",
+//"kitten4.jpg",
+];
+let imgs = document.getElementsByTagName('img');
+for(imgElt of imgs)
+{
+let r = Math.floor(Math.random() * filenames.length);
+let file = 'images/' + filenames[r];
+let url = chrome.extension.getURL(file);
+imgElt.src = url;
+console.log(url);
+}
 }
